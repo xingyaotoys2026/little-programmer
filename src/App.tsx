@@ -1,17 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "@/pages/Home";
-import Lesson from "@/pages/Lesson";
-import Practice from "@/pages/Practice";
-import Header from "@/components/Header";
+import VideoPage from "@/pages/VideoPage";
+import RecordPage from "@/pages/RecordPage";
+import EditorPage from "@/pages/EditorPage";
 
 export default function App() {
   return (
     <Router>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/lesson/:id" element={<Lesson />} />
-        <Route path="/practice" element={<Practice />} />
+        <Route path="/video" element={<VideoPage />} />
+        <Route path="/record" element={<RecordPage />} />
+        <Route path="/editor" element={<EditorPage />} />
       </Routes>
     </Router>
   );
